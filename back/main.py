@@ -1,7 +1,7 @@
 import os
 import urllib.request
 from app import app
-from lib.generate import generate
+from aic.evaluate import evaluate
 from flask import Flask, request, redirect, jsonify
 from werkzeug.utils import secure_filename
 
@@ -22,8 +22,8 @@ def upload_image():
 		resp.status_code = 400
 		return resp
 	if file and allowed_file(file.filename):
-		gen_message = generate()
-		resp = jsonify({'message': gen_message})
+		gen_message = evaluate(file)
+		resp = jsonify(gen_message)
 		resp.status_code = 201
 		return resp
 	else:
