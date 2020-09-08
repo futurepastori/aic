@@ -40,7 +40,7 @@ function App() {
 			<header>
 				<div className="title">
 					<h1>Automatic Image Captioning demo</h1>
-					<small>Víctor Ramírez</small>
+					<small>Víctor Pastori</small>
 				</div>
 				<nav className="nav">
 					<a href="https://www.github.com/futurepastori/aic-demo.git">Source</a>
